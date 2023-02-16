@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "63c97030-a81d-4c47-b42b-c6c140f931d4",
+		"name": "banking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/cuentas",
+			"item": []
+		},
+		{
+			"name": "/clientes",
+			"item": [
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clientes/cliente/301",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clientes",
+								"cliente",
+								"301"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/movimientos",
+			"item": []
+		}
+	]
+}
