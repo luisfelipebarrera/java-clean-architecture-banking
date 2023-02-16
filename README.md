@@ -19,3 +19,27 @@ It implements a domain-centric "Hexagonal" approach of a common web application 
 * Postgres Database 14.6
 * JDK 17
 * this project uses Lombok, so enable annotation processing in your IDE
+* Add environment variables in your IDE:
+  *   dbhost=localhost
+
+## Test integrity
+* Run commands:
+  
+| Maven commands |
+|----------------|
+|$ mvn clean package         |
+|$ java -jar target/banking-0.0.1-SNAPSHOT.jar         |
+
+
+## Docker release
+
+Doing a docker release:
+
+| Purpose                                                                  | Command |
+|--------------------------------------------------------------------------|---------|
+| Create docker image over current directory using a existing "Dockerfile" | docker build -t my_docker_hub_username/my_image_name:my_image_version .        |
+|                                                                          |         |
+
+
+* docker build -t my_docker_hub_username/my_image_name:my_image_version .
+
