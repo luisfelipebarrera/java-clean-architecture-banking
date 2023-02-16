@@ -33,13 +33,21 @@ It implements a domain-centric "Hexagonal" approach of a common web application 
 
 ## Docker release
 
-Doing a docker release:
+To build and run docker-with-spring-profile:
 
-| Purpose                                                                  | Command |
-|--------------------------------------------------------------------------|---------|
-| Create docker image over current directory using a existing "Dockerfile" | docker build -t my_docker_hub_username/my_image_name:my_image_version .        |
-|                                                                          |         |
+| $  docker build -f docker/Dockerfile --tag=java-mybank-account-transfer:latest . |
+|----------------------------------------------------------------------------------|
 
+Run docker image:
 
-* docker build -t my_docker_hub_username/my_image_name:my_image_version .
+| $  docker run --name java-mybank-account-transfer -p8080:8080 java-mybank-account-transfer:latest  |
+|-----|
+
+To run with environment variables (or a specific profile):
+
+|docker run --name java-mybank-account-transfer -p8080:8080 -e "dbhost=172.18.0.2" java-mybank-account-transfer:latest     |
+|-----|
+
+* [Creating Docker Images with Spring Boot](https://www.baeldung.com/spring-boot-docker-images)
+
 
